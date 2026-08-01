@@ -9,7 +9,7 @@ const TodoApp = () => {
 
   const [todoInput, setTodoInput] = useState("");
   const [search, setSearch] = useState("");
-  const [filter, setFilter] = useState("all"); // all, completed, pending
+  const [filter, setFilter] = useState("all");
   
 
   // edit ke liye
