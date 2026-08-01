@@ -105,36 +105,27 @@ console.log(findDuplicates([1, 2, 3, 2, 4, 5, 1, 6]), "output"); // [1, 2]
 // Output: 15
 
 
-function secondHighest(arr) {
-  let unique = [...new Set(arr)]; // duplicate hata diye
-  unique.sort((a, b) => b - a); // descending sort
-  return unique[1];
-}
-console.log(secondHighest([10, 5, 20, 8, 20, 15]), "output"); // 15
-
-// 5. Count Word Frequency
-
-// Given an array of strings, return an object containing the frequency of each word.
-
-// Example:
-
-// Input: ["apple", "banana", "apple", "orange", "banana", "apple"]
-
-// Output:
-// {
-//   apple: 3,
-//   banana: 2,
-//   orange: 1
-// }
-
-function wordFrequency(arr) {
+function maxFrequency(arr) {
   let freq = {};
-  for (let i = 0; i < arr.length; i++) {
-    freq[arr[i]] = (freq[arr[i]] || 0) + 1;
+
+  
+  for (let num of arr) {
+    freq[num] = (freq[num] || 0) + 1;
   }
-  return freq;
+
+  let max = 0;
+  let maxElement;
+
+  
+  for (let key in freq) {
+    if (freq[key] > max) {
+      max = freq[key];
+      maxElement = Number(key);
+    }
+  }
+
+  return maxElement;
 }
-console.log(
-  wordFrequency(["apple", "banana", "apple", "orange", "banana", "apple"]),
-  "output"
-);
+
+nodeconsole.log(maxFrequency([2, 3, 2, 5, 3, 2, 8]));
+
