@@ -1,0 +1,63 @@
+.todo-app {
+  max-width: 550px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border: 1px solid black;
+  
+}
+
+.add-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 6px;
+  font-size: 14px;
+}
+
+button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.search-box {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.filter-row {
+  margin-bottom: 10px;
+}
+
+.filter-row button.active {
+  background-color: #333;
+  color: white;
+}
+
+.stats {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.clear-btn {
+  margin-bottom: 15px;
+  background-color: orange;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
